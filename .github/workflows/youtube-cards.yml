@@ -8,11 +8,27 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Allow the job to commit to the repository
     permissions:
       contents: write
-    # Run the GitHub Readme YouTube Cards action
     steps:
-      - uses: DenverCoder1/github-readme-youtube-cards@main
+      # Primeiro: Checkout do repositório
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Segundo: Executar a ação de YouTube Cards
+      - name: Generate YouTube Cards
+        uses: DenverCoder1/github-readme-youtube-cards@main
         with:
           channel_id: UCpOdQTaDC2vc4qRPV3IxVTg
+          max_videos: 6
+          card_width: 250
+          layout: vertical
+
+      # Terceiro: Commit e push das mudanças
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update YouTube cards"
+          git push
