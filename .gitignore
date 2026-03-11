@@ -1,5 +1,4 @@
 .env
-*.mp4
 *.avi
 *.ass
 teste.py
