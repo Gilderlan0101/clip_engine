@@ -342,7 +342,6 @@ pyrightconfig.json
 *.flv
 *.mkv
 *.mov
-*.mp4
 *.mpg
 *.ogv
 *.rm
