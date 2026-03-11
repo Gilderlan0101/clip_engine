@@ -1,4 +1,4 @@
-## Clip Engine
+#Clip Engine
 
 ```markdown
 # 🎬 Clip Engine
@@ -275,7 +275,7 @@ Se este projeto te ajudou, dê uma ⭐ no GitHub!
 <div align="center">
 Feito com ❤️ e ☕ para a comunidade open source em 2026
 </div>
-```
+
 
 ---
 
