@@ -46,10 +46,12 @@ Ele faz todo o trabalho pesado para você:
 
 Aqui está um exemplo real do Clip Engine em ação:
 
-```
-
-[![Clip Engine em ação](https://img.youtube.com/vi/SEU_VIDEO_ID/0.jpg)](https://youtu.be/SEU_VIDEO_ID)
-```
+<div align="center">
+  <video src="processed_videos/final_clips/exemple.mp4" width="320" controls>
+    Seu navegador não suporta a tag de vídeo.
+  </video>
+  <p><i>Preview do processamento automático</i></p>
+</div>
 
 **▶️ Para assistir o vídeo de exemplo:**
 
