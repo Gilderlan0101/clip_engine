@@ -1,6 +1,8 @@
+<div align="center">
+<img src="icon.png" alt="Clip Engine Logo" width="200">
+
 🎬 Clip Engine
 
-<div align="center">
 <img src="https://img.shields.io/badge/python-3.11%2B-blue" alt="Python Version">
 <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
 <img src="https://img.shields.io/badge/status-active--development-brightgreen" alt="Status">
@@ -11,7 +13,7 @@
 
 📋 Sobre o Projeto
 
-Clip Engine é um motor inteligente que processa vídeos automaticamente para criar clipes prontos para YouTube Shorts, Instagram Reels e TikTok.
+O Clip Engine é um motor inteligente que processa vídeos automaticamente para criar clipes prontos para YouTube Shorts, Instagram Reels e TikTok.
 
 Ele faz todo o trabalho pesado para você:
 
@@ -30,11 +32,13 @@ Ele faz todo o trabalho pesado para você:
 Aqui está um exemplo real do processamento automático do Clip Engine:
 
 <div align="center">
-<video src="processed_videos/final_clips/exemple.mp4" width="320" controls>
-Seu navegador não suporta a tag de vídeo. Você pode baixar o vídeo em <a href="processed_videos/final_clips/exemple.mp4">neste link</a>.
+<video src="https://www.google.com/search?q=processed_videos/final_clips/exemple.mp4" width="320" controls muted>
+Seu navegador não suporta a tag de vídeo.
 </video>
 <p><i>Preview: Zoom automático + Legendas dinâmicas + Memes contextuais</i></p>
 </div>
+
+Nota: Se o vídeo não carregar acima, você pode visualizá-lo diretamente na pasta processed_videos/final_clips/.
 
 ✨ Funcionalidades
 
@@ -72,7 +76,7 @@ Pré-requisitos
 
 Python 3.11+
 
-FFmpeg instalado e configurado no PATH
+FFmpeg instalado e configurado no seu PATH
 
 Git
 
@@ -88,9 +92,6 @@ source .venv/bin/activate  # No Windows use: .venv\Scripts\activate
 
 # 3. Instale as dependências
 pip install -r requirements.txt
-
-# Recomendado: Uso do Poetry
-# pip install poetry && poetry install
 
 
 🎮 Como Usar
@@ -116,15 +117,16 @@ python src/services/transcriber.py
 📁 Estrutura do Projeto
 
 clip_engine/
+├── icon.png                 # Logo do projeto
 ├── downloads/               # Entrada de vídeos originais
 ├── processed_videos/
 │   ├── raw_clips/           # Segmentos brutos
 │   └── final_clips/         # Vídeos finais editados e legendados
 ├── imagens_efeitos/          # Banco de imagens para memes contextuais
 ├── src/
-│   ├── controllers/         # Orquestração do fluxo
-│   ├── services/            # IA, Transcrição e Detecção
-│   └── utils/               # Manipulação de vídeo (FFmpeg wrapper)
+│   ├── controllers/         # Lógica de controle do fluxo
+│   ├── services/            # Serviços de IA (Transcrição e Detecção)
+│   └── utils/               # Utilitários de vídeo e FFmpeg
 ├── requirements.txt
 └── README.md
 
@@ -135,7 +137,7 @@ Adicionar novos gatilhos visuais (Memes)
 
 Adicione a imagem em imagens_efeitos/.
 
-O sistema mapeia o nome do arquivo para palavras-chave na transcrição.
+O sistema mapeia automaticamente o nome do arquivo para palavras-chave detectadas no áudio.
 
 Lista Negra de Palavras (Censura)
 
@@ -149,23 +151,23 @@ BAD_WORDS = {
 
 🧠 Performance & Algoritmos
 
-Implementamos lógica de baixo nível para garantir que o processamento não seja o gargalo:
+Implementamos lógica de baixo nível para garantir eficiência:
 
-Busca de Frames: O(log n) usando indexação temporal.
+Busca de Frames: Complexidade O(log n) usando indexação temporal.
 
 Detecção Facial: Processamento paralelo via Mediapipe.
 
-Transcrição: Utilização de faster-whisper com suporte a GPU (CUDA).
+Transcrição: Utilização de faster-whisper com suporte a aceleração por hardware (CUDA).
 
 🤝 Contribuindo
 
-Faça um Fork.
+Faça um Fork do projeto.
 
-Crie uma Branch (git checkout -b feature/NovaFuncao).
+Crie uma Branch para sua feature (git checkout -b feature/NovaFuncao).
 
-Dê um Commit (git commit -m 'feat: Adiciona nova função').
+Dê um Commit nas suas mudanças (git commit -m 'feat: Adiciona nova função').
 
-Dê um Push (git push origin feature/NovaFuncao).
+Dê um Push para a branch (git push origin feature/NovaFuncao).
 
 Abra um Pull Request.
 
@@ -179,10 +181,5 @@ Email: lansilva007gg@gmail.com
 
 <div align="center">
 <p>Se este projeto foi útil para você, considere dar uma ⭐ no repositório!</p>
-
-
-
-
-
-Feito com ❤️ e muita ☕ por Gilderlan em 2026
+<p>Feito com ❤️ e muita ☕ por Gilderlan em 2026</p>
 </div>
