@@ -47,7 +47,8 @@ Ele faz todo o trabalho pesado para você:
 Aqui está um exemplo real do Clip Engine em ação:
 
 ```
-📁 processed_videos/final_clips/exemple.mp4
+
+[![Clip Engine em ação](https://img.youtube.com/vi/SEU_VIDEO_ID/0.jpg)](https://youtu.be/SEU_VIDEO_ID)
 ```
 
 **▶️ Para assistir o vídeo de exemplo:**
