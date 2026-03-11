@@ -11,24 +11,31 @@ jobs:
     permissions:
       contents: write
     steps:
-      # Primeiro: Checkout do repositório
+      # Checkout do repositório
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Segundo: Executar a ação de YouTube Cards
+      # Setup Python (necessário para a action)
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Executar a ação de YouTube Cards
       - name: Generate YouTube Cards
         uses: DenverCoder1/github-readme-youtube-cards@main
         with:
           channel_id: UCpOdQTaDC2vc4qRPV3IxVTg
           max_videos: 6
           card_width: 250
-          layout: vertical
+          comment_tag_name: YOUTUBE-CARDS
+          show_duration: false
+          author_name: "github-actions[bot]"
+          author_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "docs: Update YouTube cards"
+          readme_path: "README.md"
 
-      # Terceiro: Commit e push das mudanças
-      - name: Commit and Push Changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add README.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update YouTube cards"
-          git push
+      # Opcional: Se quiser personalizar cores
+      # background_color: "#0d1117"
+      # title_color: "#ffffff"
+      # stats_color: "#dedede"
