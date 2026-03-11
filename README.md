@@ -1,4 +1,3 @@
-#Clip Engine
 
 ```markdown
 # 🎬 Clip Engine
